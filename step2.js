@@ -11,8 +11,11 @@ function getAndPrintHTML(){
 
     response.on('data', function (data){
       input += data;
-      console.log(input);
+
     });
+    response.on('end', function(){
+    console.log(input)
+  });
 
   });
 }
